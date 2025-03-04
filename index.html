@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizador de Valores - IPCA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Atualizador de Valores - IPCA</h1>
+
+        <form id="valorForm">
+            <div class="form-group">
+                <label for="valor">Valor original (R$):</label>
+                <input type="number" step="0.01" class="form-control" id="valor" required>
+            </div>
+            <div class="form-group">
+                <label for="data">Data original (aaaa-mm):</label>
+                <input type="month" class="form-control" id="data" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Calcular Valor Atualizado</button>
+        </form>
+
+        <div class="mt-4" id="resultado" style="display:none;">
+            <h3>Resultado</h3>
+            <p id="valorAtualizado"></p>
+            <canvas id="grafico"></canvas>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
